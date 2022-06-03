@@ -1,0 +1,350 @@
+
+/* Main */
+
+body {
+    background-color: #F2F3F4;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.content {
+    background-color: #FEF5E7;
+    margin: 20px;
+    padding: 60px;
+    border-style: outset;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sticker {
+    background-color: #7B241C;
+    display: block;
+    height: 100%;
+    padding: 0;
+    border-style: outset;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: cursive;
+}
+
+.sticker a {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 15px;
+}
+
+.sticker a:hover:not(.active) {
+    background-color: #F7DC6F;
+    color:black;
+    transition: .3s ease-in-out;
+    padding: 8px 16px;
+    border-radius: 15px; 
+}
+
+#il-cocco-img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav [type="checkbox"] {
+    display: none;
+}
+
+nav label.toggle-menu {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    height: 20px;
+    color: #7B241C;
+    margin: 10px;
+    transition-property: opacity, visibility;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
+}
+
+nav label.toggle-menu i {
+    font-size: 25px;
+    transition: font-size 2s, transform 1s;
+}
+
+nav label.toggle-menu:hover {
+    color:#F7DC6F;
+    transition: .3s ease-in-out;
+}
+
+input.toggle-menu:checked + label.toggle-menu i {
+    font-size: 15px;
+    transform: rotate(180deg);
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+    padding: 2px;
+    font-family: cursive;
+    background-color: #7B241C;
+    color: white;
+    border-radius: 15px;
+    list-style-type: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-style: outset;
+    font-family: cursive;
+}
+
+.main-menu li a {
+    display: block;
+    margin: 5px;
+    padding: 8px 16px;
+    border-radius: 15px;
+}
+
+.main-menu li a:hover {
+    background-color: #F7DC6F;
+    color:#191814;
+    transition: .3s ease-in-out;
+}
+
+.main-menu li a:hover i {
+    transform: rotateY(180deg);
+}
+
+.main-menu i {
+    margin-right: 8px;
+    transition: transform 1s;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #b8574e;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 8px 16px;
+    z-index: 1;
+    list-style-type: none;
+    border-radius: 15px;
+    transition-property: opacity, visibility;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.footer {
+    position: block;
+    background-color:#CCD1D1 ;
+    height: 100px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 30px;
+    padding: 20px;
+    color: #191814;
+    grid-area: footer;
+}
+
+/* Startseite */
+
+.startsite-photos {
+    display: block;
+    text-align: center;   
+}
+
+.startsite-photos img {
+    max-width: 100%;
+    height: auto;
+    border-style: ridge;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.startsite-photos img:hover {
+    opacity: 0.3;
+    transition: .3s ease-in-out;
+}
+
+.body-footer {
+    display: flex;
+    justify-content: space-between;
+    font-family: cursive;
+}
+
+/* Mittagsmenü */
+
+#mittags-menu {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Bilder-Ristorante */
+
+.bilder-ristorante {
+    display: block;
+    text-align: center;
+}
+
+.bilder-ristorante img {
+    max-width: 100%;
+    height: auto;
+    border-style: ridge; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.bilder-ristorante img:hover {
+    opacity: 0.3;
+    transition: .3s ease-in-out;
+}
+
+/* Bilder-Terasse */
+
+.bilder-terasse {
+    display: block;
+    text-align: center;   
+}
+
+.bilder-terasse img {
+    max-width: 100%;
+    height: auto;
+    border-style: ridge;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.bilder-terasse img:hover {
+    opacity: 0.3;
+    transition: .3s ease-in-out;
+}
+
+/* Bilder-Nebenräume */
+
+.bilder-nebenräume {
+    display: block;
+    text-align: center;
+}
+
+.bilder-nebenräume img {
+    max-width: 100%;
+    height: auto;
+    border-style: ridge;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.bilder-nebenräume img:hover {
+    opacity: 0.3;
+    transition: .3s ease-in-out;
+}
+
+/* Online-Bestellung */
+
+input[type=text] {
+    padding: 6px 20px;
+    margin: 10px 0px;
+    border-style: ridge;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    border: none;
+}
+
+input[type=text]:focus {
+    background-color: #F7DC6F;
+}
+
+select {
+    padding: 6px 20px;
+    margin: 10px 0px;
+    border-style: ridge;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    border: none;
+}
+
+/* Speisekarte */
+
+.speisekarte {
+    background-image: url(https://i.stack.imgur.com/jGlzr.png);
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.speisekarte img {
+    filter: brightness(0.7);
+    max-width: 100%;
+    height: auto;
+    margin: 23px 30px;
+    border-style: ridge;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.speisekarte img:hover {
+    cursor: pointer;
+    transition-property: transform, filter;
+    transition-duration: 1s;
+    transform: scale(1.2);
+    filter: brightness(1);
+}
+
+/* Media */
+
+@media  screen and (max-width: 800px) {
+    header {
+        display: inline;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    #il-cocco-img {
+        display: none;
+    }
+
+    .main-menu {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        display: block;
+        width: 130px;
+        transition-property: opacity, visibility;
+        transition-duration: 0.2s;
+        transition-delay: 0.2s;
+    }
+
+    .dropdown-content {
+        display: flex;
+    }
+
+    input.toggle-menu:checked ~ .main-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav label.toggle-menu {
+        display: block;
+    }
+
+    .body-footer {
+        display: block;
+    }
+}
